@@ -63,6 +63,15 @@ nix develop
 cabal run easy-rider
 ```
 
+You can also build and load docker images using nix:
+
+```
+nix build .#docker-easy-rider
+
+docker load < result
+
+```
+
 If you don't use nix then you need to provide the dependencies yourself. The
 app depends on `mithril-client 2337.0`, `cardano-node 8.1.2`,  `ghc 9.2.8` and
 `cabal 3.0`.
